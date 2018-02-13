@@ -32,7 +32,7 @@ function Spot(i, j) {
   // Display me
   this.show = function(col) {
     if (this.wall) {
-      fill(0);
+      fill(255);
       noStroke();
       ellipse(this.i * w + w / 2, this.j * h + h / 2, w / 2, h / 2);
     } else if (col){

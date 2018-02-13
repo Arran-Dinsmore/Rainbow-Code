@@ -23,8 +23,8 @@ function heuristic(a, b) {
 }
 
 // How many columns and rows?
-var cols = 50;
-var rows = 50;
+var cols = 150;
+var rows = 150;
 
 // This will be the 2D array
 var grid = new Array(cols);
@@ -44,7 +44,7 @@ var w, h;
 var path = [];
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(600, 600);
   console.log('A*');
 
   // Grid cell size
@@ -143,7 +143,7 @@ function draw() {
   }
 
   // Draw current state of everything
-  background(255);
+  background(100);
 
   for (var i = 0; i < cols; i++) {
     for (var j = 0; j < rows; j++) {
@@ -152,11 +152,11 @@ function draw() {
   }
 
   for (var i = 0; i < closedSet.length; i++) {
-    closedSet[i].show(color(255, 0, 0, 50));
+    closedSet[i].show(color(255, 160, 0, 80));
   }
 
   for (var i = 0; i < openSet.length; i++) {
-    openSet[i].show(color(0, 255, 0, 50));
+    openSet[i].show(color(0, 200, 160, 80));
   }
 
 
@@ -176,7 +176,7 @@ function draw() {
 
   // Drawing path as continuous line
   noFill();
-  stroke(255, 0, 200);
+  stroke(0, 255, 200);
   strokeWeight(w / 2);
   beginShape();
   for (var i = 0; i < path.length; i++) {
